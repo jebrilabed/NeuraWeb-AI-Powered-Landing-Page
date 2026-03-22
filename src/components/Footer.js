@@ -76,7 +76,7 @@ export default function Footer() {
             {/* Social icons */}
             <div style={{ display: 'flex', gap: 8 }}>
               {SOCIAL.map(s => (
-                <a key={s.name} href="#" title={s.name}
+                <a key={s.name} href={`https://${s.name.toLowerCase()}.com`} title={s.name} target="_blank" rel="noreferrer"
                   style={{
                     width: 36, height: 36, borderRadius: 10,
                     background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)',
@@ -104,7 +104,7 @@ export default function Footer() {
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {col.links.map(link => (
                   <li key={link}>
-                    <a href="#"
+                    <a href={`/${link.toLowerCase()}`}
                       style={{
                         fontFamily: "'Space Grotesk', sans-serif", fontWeight: 300,
                         color: '#475569', fontSize: '0.85rem', textDecoration: 'none',
