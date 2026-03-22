@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #070B14;
+  color: #e2e8f0;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b1d7a;
+  border-radius: 3px;
+}
+
+/* Global animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes conv {
+  to { stroke-dashoffset: -20; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 18s linear infinite;
+}
